@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "2348137471522";
+const WHATSAPP_NUMBER = "2348064050225";
 const PAGE_SIZE = 8;
 
 const products = [
@@ -524,7 +524,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector("#navMenu");
 
 function whatsappUrl(productName) {
-  const text = `Hello Nedu's Gadgets, I am interested in the ${productName}. Please confirm today's price, available condition, storage and colours.`;
+  const text = `Hello Lisa Electronics, I am interested in the ${productName}. Please confirm today's price, available condition, storage and colours.`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 
@@ -547,7 +547,7 @@ function productCard(product) {
   return `
     <article class="product-card" data-product-id="${product.id}" tabindex="0" role="button" aria-label="View ${product.name} details">
       <div class="product-media">
-        <img class="${product.image.includes("images/classic/") ? "product-image-contain" : ""}" src="${product.image}" alt="${product.name} available from Nedu's Gadgets" loading="lazy">
+        <img class="${product.image.includes("images/classic/") ? "product-image-contain" : ""}" src="${product.image}" alt="${product.name} available from Lisa Electronics" loading="lazy">
         <span class="product-tag">${product.tag}</span>
       </div>
       <div class="product-body">
