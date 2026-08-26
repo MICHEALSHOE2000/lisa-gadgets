@@ -1,4 +1,5 @@
-const WHATSAPP_NUMBER = "2348064050225";
+const WHATSAPP_NUMBER = document.body.dataset.whatsapp || "2349163341539";
+const BRANCH_NAME = document.body.dataset.branch || "Lagos";
 const PAGE_SIZE = 8;
 
 const products = [
@@ -524,7 +525,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector("#navMenu");
 
 function whatsappUrl(productName) {
-  const text = `Hello Lisa Electronics, I am interested in the ${productName}. Please confirm today's price, available condition, storage and colours.`;
+  const text = `Hello Lisa Electronics ${BRANCH_NAME} branch, I am interested in the ${productName}. Please confirm today's price, available condition, storage and colours.`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 

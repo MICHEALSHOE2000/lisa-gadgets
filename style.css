@@ -110,6 +110,14 @@ p, h1, h2, h3 { margin-top: 0; }
 .menu-toggle { display: none; width: 46px; height: 46px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; }
 .menu-toggle span { display: block; width: 20px; height: 1.5px; margin: 5px auto; background: var(--ink); transition: transform .25s ease; }
 
+.branch-tabs { border-bottom: 1px solid rgba(10,11,13,.08); background: #fff; }
+.branch-tabs-inner { min-height: 58px; display: flex; align-items: center; justify-content: center; gap: 22px; }
+.branch-tabs-label { color: var(--muted); font-size: .67rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.branch-tab-list { padding: 4px; display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper-2); }
+.branch-tab { min-width: 92px; padding: 8px 16px; border-radius: 999px; color: #555; font-size: .76rem; font-weight: 700; text-align: center; transition: color .2s ease, background .2s ease, box-shadow .2s ease; }
+.branch-tab:hover { color: var(--ink); background: rgba(255,255,255,.7); }
+.branch-tab.active { color: #fff; background: var(--gold); box-shadow: 0 6px 18px rgba(215,25,32,.2); }
+
 .hero {
   min-height: calc(100vh - 120px);
   padding-block: clamp(54px, 7.5vw, 96px);
@@ -409,6 +417,10 @@ p, h1, h2, h3 { margin-top: 0; }
   .announcement p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .announcement p span { margin-inline: 8px; }
   .announcement a { display: none; }
+  .branch-tabs-inner { min-height: 62px; flex-direction: column; gap: 5px; }
+  .branch-tabs-label { font-size: .58rem; }
+  .branch-tab-list { width: 100%; }
+  .branch-tab { min-width: 0; flex: 1; padding: 7px 10px; }
   .brand-mark { width: 150px; height: 48px; padding: 0; }
   .header-cta { display: none; }
   .hero { padding: 54px 0 34px; gap: 40px; }
