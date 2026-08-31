@@ -529,6 +529,11 @@ function whatsappUrl(productName) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 
+function accessoryWhatsappUrl(accessoryName) {
+  const text = `Hello Lisa Electronics ${BRANCH_NAME} branch, I am interested in ${accessoryName}. Please share your current options, prices and available colours.`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
 function matchesFilter(product) {
   if (state.filter === "All") return true;
   if (state.filter === "Foldable") return product.collection === "Foldable";
@@ -637,6 +642,10 @@ document.querySelectorAll("[data-collection], [data-brand]").forEach((card) => {
     setFilter(card.dataset.collection || card.dataset.brand);
     document.querySelector("#shop").scrollIntoView({ behavior: "smooth" });
   });
+});
+
+document.querySelectorAll("[data-accessory]").forEach((link) => {
+  link.href = accessoryWhatsappUrl(link.dataset.accessory);
 });
 
 menuToggle.addEventListener("click", () => {
