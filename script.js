@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = document.body.dataset.whatsapp || "2349163341539";
+const WHATSAPP_NUMBER = document.body.dataset.whatsapp || "2347089254544";
 const BRANCH_NAME = document.body.dataset.branch || "Lagos";
 const PAGE_SIZE = 8;
 
