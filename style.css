@@ -537,3 +537,109 @@ p, h1, h2, h3 { margin-top: 0; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Lisa Electronics Lagos: iPhone 18 Pro feature hero */
+.iphone18-hero { padding-block: clamp(28px, 4.2vw, 56px); }
+.iphone18-hero-panel {
+  position: relative;
+  min-height: 590px;
+  display: grid;
+  grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr);
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 36px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 78% 52%, rgba(117,27,43,.5), transparent 34%),
+    radial-gradient(ellipse at 4% 2%, rgba(215,25,32,.18), transparent 32%),
+    linear-gradient(118deg, #0a090a 0%, #111012 52%, #09090a 100%);
+  box-shadow: 0 28px 80px rgba(0,0,0,.22);
+}
+.iphone18-hero-panel::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  opacity: .2;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.iphone18-hero-panel::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 4%;
+  width: min(44vw, 570px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.iphone18-hero-copy { position: relative; z-index: 2; padding: clamp(36px, 5.3vw, 74px) 0 clamp(36px, 5.3vw, 74px) clamp(30px, 5.3vw, 74px); }
+.iphone18-hero-kicker { margin: 0 0 35px; display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,.68); font-size: .69rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.iphone18-hero-kicker > span { width: 7px; height: 7px; border-radius: 50%; background: #ff6269; box-shadow: 0 0 0 5px rgba(255,98,105,.14); }
+.iphone18-hero-kicker b { color: rgba(255,255,255,.32); font-weight: 400; }
+.iphone18-hero-eyebrow { margin: 0 0 16px; color: #ff7279; font-size: .65rem; font-weight: 800; letter-spacing: .19em; }
+.iphone18-hero h1 { max-width: 660px; margin: 0 0 24px; color: #fff; font-family: var(--font-display); font-size: clamp(3.1rem, 5.6vw, 5.9rem); font-weight: 700; letter-spacing: -.085em; line-height: .92; }
+.iphone18-hero h1 em { color: #f0b1b6; font-family: Georgia, serif; font-weight: 400; font-style: normal; letter-spacing: -.065em; }
+.iphone18-hero-lead { max-width: 475px; margin: 0; color: rgba(255,255,255,.72); font-size: clamp(.98rem, 1.25vw, 1.1rem); line-height: 1.68; }
+.iphone18-hero-actions { margin-top: 31px; display: flex; flex-wrap: wrap; gap: 11px; }
+.iphone18-hero-actions .button { min-height: 50px; padding-inline: 19px; gap: 11px; }
+.iphone18-hero-actions .button-primary { background: linear-gradient(135deg, #ef454c, #bd151e); box-shadow: 0 12px 32px rgba(215,25,32,.3); }
+.iphone18-hero-actions .button-primary:hover { background: #e12a33; }
+.iphone18-hero-secondary { border-color: rgba(255,255,255,.2); color: #fff; background: rgba(255,255,255,.06); }
+.iphone18-hero-secondary:hover { color: #fff; background: rgba(255,255,255,.13); }
+.iphone18-finishes { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: rgba(255,255,255,.62); font-size: .67rem; }
+.iphone18-finish-label { margin-right: 2px; color: rgba(255,255,255,.82); font-weight: 700; }
+.iphone18-finish-swatches { display: inline-flex; align-items: center; gap: 4px; }
+.iphone18-finish-swatches i { width: 10px; height: 10px; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; background: #772b3e; }
+.iphone18-finish-swatches i:nth-child(2) { background: #bec8d6; }
+.iphone18-finish-swatches i:nth-child(3) { background: #aaa9a8; }
+.iphone18-finish-swatches i:nth-child(4) { background: #242427; }
+.iphone18-finish-names { color: rgba(255,255,255,.57); }
+.iphone18-hero-visual { position: relative; z-index: 1; min-width: 0; min-height: 560px; margin: 0; display: grid; place-items: center; overflow: hidden; }
+.iphone18-hero-glow { position: absolute; width: min(38vw, 460px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(128,34,51,.55), rgba(85,21,34,.16) 50%, transparent 72%); filter: blur(8px); }
+.iphone18-hero-visual img { position: relative; z-index: 1; display: block; width: min(100%, 640px); height: 560px; object-fit: contain; mix-blend-mode: screen; filter: drop-shadow(0 30px 42px rgba(0,0,0,.42)); transform: scale(1.08); }
+.iphone18-hero-visual figcaption { position: absolute; z-index: 2; right: 28px; bottom: 24px; padding: 11px 15px; display: grid; gap: 2px; border: 1px solid rgba(255,255,255,.15); border-radius: 14px; color: #fff; background: rgba(9,9,10,.72); backdrop-filter: blur(12px); }
+.iphone18-hero-visual figcaption span { color: rgba(255,255,255,.57); font-size: .59rem; letter-spacing: .15em; text-transform: uppercase; }
+.iphone18-hero-visual figcaption strong { font-family: var(--font-display); font-size: .79rem; }
+.iphone18-hero-visual figcaption i { color: #ff7279; font-style: normal; }
+.iphone18-hero-index { position: absolute; z-index: 2; right: 27px; top: 25px; color: rgba(255,255,255,.45); font-size: .6rem; font-weight: 700; letter-spacing: .18em; }
+.iphone18-hero-index i { padding-inline: 4px; color: #ff7279; font-style: normal; }
+
+@media (max-width: 900px) {
+  .iphone18-hero-panel { min-height: 520px; grid-template-columns: minmax(0, 1fr) minmax(270px, .85fr); }
+  .iphone18-hero-copy { padding-left: clamp(25px, 4vw, 42px); }
+  .iphone18-hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); }
+  .iphone18-hero-visual { min-height: 490px; }
+  .iphone18-hero-visual img { height: 490px; }
+  .iphone18-hero-panel::after { right: 0; width: 48vw; }
+}
+@media (max-width: 680px) {
+  .iphone18-hero { padding-block: 22px 32px; }
+  .iphone18-hero-panel { min-height: 0; grid-template-columns: 1fr; border-radius: 26px; }
+  .iphone18-hero-copy { padding: 29px 23px 0; }
+  .iphone18-hero-kicker { margin-bottom: 25px; font-size: .6rem; letter-spacing: .09em; }
+  .iphone18-hero-eyebrow { margin-bottom: 14px; font-size: .58rem; }
+  .iphone18-hero h1 { margin-bottom: 18px; font-size: clamp(2.65rem, 12vw, 4rem); line-height: .95; }
+  .iphone18-hero-lead { font-size: .95rem; }
+  .iphone18-hero-actions { margin-top: 24px; flex-direction: column; align-items: stretch; }
+  .iphone18-hero-actions .button { width: 100%; justify-content: space-between; }
+  .iphone18-finishes { margin-top: 23px; gap: 8px; font-size: .61rem; }
+  .iphone18-hero-visual { min-height: 350px; margin-top: -8px; }
+  .iphone18-hero-visual img { width: min(100%, 430px); height: 350px; transform: scale(1.06); }
+  .iphone18-hero-visual figcaption { right: 13px; bottom: 13px; padding: 9px 11px; }
+  .iphone18-hero-index { right: 16px; top: 15px; }
+  .iphone18-hero-panel::after { top: 73%; right: 10%; width: 74vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .iphone18-hero-actions .button { transition: none; }
+}
+
